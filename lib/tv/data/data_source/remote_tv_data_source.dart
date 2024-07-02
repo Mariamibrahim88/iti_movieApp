@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:movie_iti/core/error/exceptions.dart';
-import 'package:movie_iti/core/utils/api_constance.dart';
+import 'package:movie_iti/core/utils/functions/api_constance.dart';
 import 'package:movie_iti/tv/data/data_source/base_tv_data_source.dart';
 import 'package:movie_iti/tv/data/models/tv_model.dart';
 
-import '../../../core/utils/error_message_model.dart';
+import '../../../core/utils/functions/error_message_model.dart';
 
 class RemoteTvDataSource extends BaseTvDataSource {
   @override
