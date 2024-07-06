@@ -7,7 +7,7 @@ abstract class TvEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class GetNowPlayingTvEvent extends TvEvent {}
+class OnAirTvEvent extends TvEvent {}
 
 class GetPopularTvEvent extends TvEvent {}
 
