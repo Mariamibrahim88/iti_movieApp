@@ -18,8 +18,8 @@ class ShimmerLoadingOnAir extends StatelessWidget {
   }
 }
 
-class ShimmerLoadingPopular extends StatelessWidget {
-  const ShimmerLoadingPopular();
+class ShimmerLoadingPopularhor extends StatelessWidget {
+  const ShimmerLoadingPopularhor();
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +33,30 @@ class ShimmerLoadingPopular extends StatelessWidget {
           color: Colors.black,
           borderRadius: BorderRadius.circular(8.0),
         ),
+      ),
+    );
+  }
+}
+
+class ShimmerLoadingPopularver extends StatelessWidget {
+  const ShimmerLoadingPopularver({
+    Key? key,
+    //  this.width,
+    // this.height,
+  }) : super(key: key);
+
+  // final double width;
+  // final double height;
+
+  @override
+  Widget build(BuildContext context) {
+    return Shimmer.fromColors(
+      baseColor: Colors.grey[850]!,
+      highlightColor: Colors.grey[800]!,
+      child: Container(
+        width: 120,
+        height: 100,
+        color: Colors.white,
       ),
     );
   }

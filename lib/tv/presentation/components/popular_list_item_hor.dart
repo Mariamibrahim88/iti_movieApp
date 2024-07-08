@@ -20,7 +20,7 @@ class FeaturedListViewItem extends StatelessWidget {
           //child: Image.asset('assets/tv_image.jpg'),
           child: CachedNetworkImage(
             imageUrl: ApiConstance.imageUrl(tv.backdropPath),
-            placeholder: (context, url) => const ShimmerLoadingPopular(),
+            placeholder: (context, url) => const ShimmerLoadingPopularhor(),
             fit: BoxFit.fill,
             errorWidget: (context, url, error) => const Icon(Icons.error),
           )),

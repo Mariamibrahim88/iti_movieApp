@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:movie_iti/core/utils/functions/custom_navigate_bar.dart';
 import 'package:movie_iti/core/utils/functions/service_locator.dart';
 import 'package:movie_iti/core/utils/functions/spacing.dart';
 
 import 'package:movie_iti/tv/presentation/components/custom_on_the_air_section.dart';
 import 'package:movie_iti/tv/presentation/components/custom_row.dart';
-import 'package:movie_iti/tv/presentation/components/popular_list_view.dart';
+import 'package:movie_iti/tv/presentation/components/popular_list_view_hor.dart';
 
 import 'package:movie_iti/tv/presentation/components/top_rated_list_view.dart';
 import 'package:movie_iti/tv/presentation/controller/bloc/tv_bloc.dart';
@@ -27,12 +30,20 @@ class HomeViewBody extends StatelessWidget {
           children: [
             const CustomOnTheAirSection(),
             //verticalSpace(5),
-            CustomRow(
-                title: "Popular",
-                text: "see More",
-                icon: Icons.arrow_forward_ios),
+            GestureDetector(
+              onTap: () {
+                //Navigator.pushNamed(context, '/popularTvListView');
+
+                GoRouter.of(context).push('/popularTvListView');
+                // GoRouter.of(context).push('/detailsView', extra: movies);
+              },
+              child: CustomRow(
+                  title: "Popular",
+                  text: "see More",
+                  icon: Icons.arrow_forward_ios),
+            ),
             verticalSpace(4),
-            const PopularListView(),
+            const PopularListViewhor(),
             verticalSpace(14),
             CustomRow(
                 title: "Top Rated",

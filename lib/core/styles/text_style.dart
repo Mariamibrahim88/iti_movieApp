@@ -8,4 +8,13 @@ class TextStyles {
     fontFamily: GoogleFonts.rubik().fontFamily,
   );
   static const TextRow2 = TextStyle(fontSize: 15);
+  static const textTitle = TextStyle(
+    fontSize: 20,
+    color: Colors.white,
+    fontWeight: FontWeight.bold,
+  );
+  static const textOverview = TextStyle(
+    fontSize: 14,
+    color: Colors.white,
+  );
 }

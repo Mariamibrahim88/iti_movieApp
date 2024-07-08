@@ -16,6 +16,8 @@ class CustomOnTheAirSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<TvBloc, TvState>(
+      buildWhen: ((previous, current) =>
+          previous.onAirtvState != current.onAirtvState),
       builder: (context, state) {
         switch (state.onAirtvState) {
           case RequestState.loading:
