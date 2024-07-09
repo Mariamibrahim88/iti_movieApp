@@ -1,8 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:movie_iti/core/utils/functions/custom_navigate_bar.dart';
 import 'package:movie_iti/core/utils/functions/service_locator.dart';
 import 'package:movie_iti/core/utils/functions/spacing.dart';
 
@@ -10,7 +10,7 @@ import 'package:movie_iti/tv/presentation/components/custom_on_the_air_section.d
 import 'package:movie_iti/tv/presentation/components/custom_row.dart';
 import 'package:movie_iti/tv/presentation/components/popular_list_view_hor.dart';
 
-import 'package:movie_iti/tv/presentation/components/top_rated_list_view.dart';
+import 'package:movie_iti/tv/presentation/components/top_rated_list_view_hor.dart';
 import 'package:movie_iti/tv/presentation/controller/bloc/tv_bloc.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -45,12 +45,18 @@ class HomeViewBody extends StatelessWidget {
             verticalSpace(4),
             const PopularListViewhor(),
             verticalSpace(14),
-            CustomRow(
-                title: "Top Rated",
-                text: "see More",
-                icon: Icons.arrow_forward_ios),
+            GestureDetector(
+              onTap: () {
+                //Navigator.pushNamed(context, '/topRatedTvListView');
+                GoRouter.of(context).push('/topRatedTvListView');
+              },
+              child: CustomRow(
+                  title: "Top Rated",
+                  text: "see More",
+                  icon: Icons.arrow_forward_ios),
+            ),
             verticalSpace(4),
-            const TopRatedListView(),
+            const TopRatedListViewhor(),
           ],
         ),
       ),

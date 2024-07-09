@@ -21,7 +21,7 @@ class CustomOnTheAirSection extends StatelessWidget {
       builder: (context, state) {
         switch (state.onAirtvState) {
           case RequestState.loading:
-            return const ShimmerLoadingOnAir(); // Show the shimmer loading widget
+          // return const ShimmerLoadingOnAir();
           case RequestState.loaded:
             return FadeIn(
               duration: const Duration(milliseconds: 500),

@@ -6,8 +6,8 @@ import 'package:shimmer/shimmer.dart';
 
 import 'shimmer_custom_loading.dart';
 
-class TopRatedListViewItemhor extends StatelessWidget {
-  const TopRatedListViewItemhor({super.key, required this.tv});
+class TopRatedListViewItemHor extends StatelessWidget {
+  const TopRatedListViewItemHor({super.key, required this.tv});
 
   final TvEntity tv;
 

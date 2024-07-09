@@ -19,7 +19,7 @@ class PopularListViewhor extends StatelessWidget {
       builder: (context, state) {
         switch (state.populatTvState) {
           case RequestState.loading:
-            return const ShimmerLoadingPopularhor(); // Show the shimmer loading widget
+          // return const ShimmerLoadingPopularhor(); // Show the shimmer loading widget
           case RequestState.loaded:
             return SizedBox(
               height: MediaQuery.of(context).size.height * 0.23,
@@ -39,7 +39,7 @@ class PopularListViewhor extends StatelessWidget {
                     //     GoRouter.of(context)
                     //         .push('/bookDetailsView', extra: state.books[index]);
                     //   },
-                    child: FeaturedListViewItem(tv: tvv),
+                    child: TopRatedListViewItemhor(tv: tvv),
                   );
                 },
               ),

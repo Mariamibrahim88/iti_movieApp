@@ -5,8 +5,8 @@ import 'package:movie_iti/tv/presentation/components/popular_list_item_hor.dart'
 import 'package:movie_iti/tv/presentation/components/shimmer_custom_loading.dart';
 import 'package:movie_iti/tv/presentation/controller/bloc/tv_bloc.dart';
 
-class TopRatedListView extends StatelessWidget {
-  const TopRatedListView({super.key});
+class TopRatedListViewhor extends StatelessWidget {
+  const TopRatedListViewhor({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class TopRatedListView extends StatelessWidget {
       builder: (context, state) {
         switch (state.topRatedTvState) {
           case RequestState.loading:
-            return const ShimmerLoadingPopularhor();
+          //return const ShimmerLoadingPopularhor();
           case RequestState.loaded:
             return SizedBox(
               height: MediaQuery.of(context).size.height * 0.23,
@@ -35,7 +35,7 @@ class TopRatedListView extends StatelessWidget {
                     //     GoRouter.of(context)
                     //         .push('/bookDetailsView', extra: state.books[index]);
                     //   },
-                    child: FeaturedListViewItem(
+                    child: TopRatedListViewItemhor(
                       tv: tvv,
                     ),
                   );

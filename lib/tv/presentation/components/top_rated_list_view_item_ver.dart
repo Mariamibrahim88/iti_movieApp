@@ -8,9 +8,10 @@ import 'package:movie_iti/core/utils/functions/api_constance.dart';
 import 'package:movie_iti/core/utils/functions/spacing.dart';
 import 'package:movie_iti/tv/domain/entities/tv_entity.dart';
 import 'package:movie_iti/tv/presentation/components/shimmer_custom_loading.dart';
+// Import the shimmer package
 
-class PopularListItemVer extends StatelessWidget {
-  const PopularListItemVer({Key? key, required this.tv}) : super(key: key);
+class TopRatedListItemVer extends StatelessWidget {
+  const TopRatedListItemVer({Key? key, required this.tv}) : super(key: key);
 
   final TvEntity tv;
 
