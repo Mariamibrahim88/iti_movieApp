@@ -10,6 +10,13 @@ class ApiConstance {
 
   static String imageUrl(String path) => '$baseImageUrl$path';
 
+  static const String nowPlayingMoviesPath =
+      "$baseUrl/movie/now_playing?api_key=$apiKey";
+  static const String popularMoviesPath =
+      "$baseUrl/movie/popular?api_key=$apiKey";
+  static const String topRatedMoviesPath =
+      "$baseUrl/movie/top_rated?api_key=$apiKey";
+
   //https://api.themoviedb.org/3/movie/550?api_key=1eef39c0162f3a9845a043fc105ed1ff
   //https://api.themoviedb.org/3/tv/on_the_air?api_key=1eef39c0162f3a9845a043fc105ed1ff
 }

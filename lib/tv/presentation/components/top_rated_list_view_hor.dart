@@ -35,7 +35,7 @@ class TopRatedListViewhor extends StatelessWidget {
                     //     GoRouter.of(context)
                     //         .push('/bookDetailsView', extra: state.books[index]);
                     //   },
-                    child: TopRatedListViewItemhor(
+                    child: PopularListViewItemhor(
                       tv: tvv,
                     ),
                   );
