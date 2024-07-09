@@ -40,7 +40,8 @@ class CustomNowPlayingSection extends StatelessWidget {
                       children: [
                         ClipRRect(
                           child: CachedNetworkImage(
-                            imageUrl: ApiConstance.imageUrl(i.backdropPath),
+                            imageUrl:
+                                ApiConstance.imageUrl(i.backdropPath ?? ""),
                             placeholder: (context, url) =>
                                 const ShimmerLoadingOnAir(), // Use the shimmer loading widget as a placeholder
                             errorWidget: (context, url, error) =>

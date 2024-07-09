@@ -15,39 +15,33 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
   MoviesBloc(this.getNowPlayingMoviesUsecase, this.getPopularMoviesUasecase,
       this.getTopMoviesUasecase)
       : super(const MoviesState()) {
-    on<GetNowPlayingMoviesEvent>(_getNowPlayingMovies);
-    on<GetPopularMoviesEvent>(_getPopularMovies);
-    on<GetTopRatedMoviesEvent>(_getTopRatedMovies);
-  }
+    on<GetNowPlayingMoviesEvent>((event, emit) async {
+      final result = await getNowPlayingMoviesUsecase.execute();
+      result.fold(
+          (l) => emit(state.copyWith(
+              nowPlayingState: RequestState.error,
+              nowPlayingMessage: l.message)),
+          (r) => emit(state.copyWith(
+              nowPlayingMovies: r, nowPlayingState: RequestState.loaded)));
+    });
 
-  FutureOr<void> _getNowPlayingMovies(
-      GetNowPlayingMoviesEvent event, Emitter<MoviesState> emit) async {
-    final result = await getNowPlayingMoviesUsecase.execute();
-    result.fold(
-        (l) => emit(state.copyWith(
-            nowPlayingState: RequestState.error, nowPlayingMessage: l.message)),
-        (r) => emit(state.copyWith(
-            nowPlayingMovies: r, nowPlayingState: RequestState.loaded)));
-  }
+    on<GetPopularMoviesEvent>((event, emit) async {
+      final result = await getPopularMoviesUasecase.execute();
 
-  FutureOr<void> _getPopularMovies(
-      GetPopularMoviesEvent event, Emitter<MoviesState> emit) async {
-    final result = await getPopularMoviesUasecase.execute();
+      result.fold(
+          (l) => emit(state.copyWith(
+              popularState: RequestState.error, populareMessage: l.message)),
+          (r) => emit(state.copyWith(
+              popularMovies: r, popularState: RequestState.loaded)));
+    });
 
-    result.fold(
-        (l) => emit(state.copyWith(
-            popularState: RequestState.error, populareMessage: l.message)),
-        (r) => emit(state.copyWith(
-            popularMovies: r, popularState: RequestState.loaded)));
-  }
-
-  FutureOr<void> _getTopRatedMovies(
-      GetTopRatedMoviesEvent event, Emitter<MoviesState> emit) async {
-    final result = await getTopMoviesUasecase.execute();
-    result.fold(
-        (l) => emit(state.copyWith(
-            topRatedState: RequestState.error, topRatedMessage: l.message)),
-        (r) => emit(state.copyWith(
-            topRatedMovies: r, topRatedState: RequestState.loaded)));
+    on<GetTopRatedMoviesEvent>((event, emit) async {
+      final result = await getTopMoviesUasecase.execute();
+      result.fold(
+          (l) => emit(state.copyWith(
+              topRatedState: RequestState.error, topRatedMessage: l.message)),
+          (r) => emit(state.copyWith(
+              topRatedMovies: r, topRatedState: RequestState.loaded)));
+    });
   }
 }

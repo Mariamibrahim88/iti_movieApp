@@ -17,7 +17,7 @@ class TopRatedMoviesListViewItemHor extends StatelessWidget {
           aspectRatio: 2.6 / 4,
           //child: Image.asset('assets/tv_image.jpg'),
           child: CachedNetworkImage(
-            imageUrl: ApiConstance.imageUrl(movie.backdropPath),
+            imageUrl: ApiConstance.imageUrl(movie.backdropPath ?? ''),
             placeholder: (context, url) => const ShimmerLoadingPopularhor(),
             fit: BoxFit.fill,
             errorWidget: (context, url, error) => const Icon(Icons.error),
