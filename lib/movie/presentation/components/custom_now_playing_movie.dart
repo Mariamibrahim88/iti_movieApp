@@ -104,7 +104,7 @@ class CustomNowPlayingSection extends StatelessWidget {
                                     color: Colors.red,
                                   ),
                                   Text(
-                                    'On The Air'.toUpperCase(),
+                                    'Now Playing'.toUpperCase(),
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,

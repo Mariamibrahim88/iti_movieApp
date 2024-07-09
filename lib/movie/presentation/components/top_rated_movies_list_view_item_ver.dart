@@ -1,7 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie_iti/core/styles/text_style.dart';
 import 'package:movie_iti/core/utils/functions/api_constance.dart';
@@ -9,8 +7,8 @@ import 'package:movie_iti/core/utils/functions/spacing.dart';
 import 'package:movie_iti/movie/domain/entities/movie_entity.dart';
 import 'package:movie_iti/tv/presentation/components/shimmer_custom_loading.dart';
 
-class PopularMovieListItemVer extends StatelessWidget {
-  const PopularMovieListItemVer({Key? key, required this.movie})
+class TopRatedMoviesListItemVer extends StatelessWidget {
+  const TopRatedMoviesListItemVer({Key? key, required this.movie})
       : super(key: key);
 
   final Movie movie;
@@ -45,7 +43,7 @@ class PopularMovieListItemVer extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(5),
                   child: CachedNetworkImage(
-                    imageUrl: ApiConstance.imageUrl(movie.backdropPath ?? ''),
+                    imageUrl: ApiConstance.imageUrl(movie.backdropPath ?? ""),
                     height: 140.h,
                     width: 95.w,
                     fit: BoxFit.cover,

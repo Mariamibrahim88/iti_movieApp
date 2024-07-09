@@ -35,13 +35,13 @@ class Nav_State extends State<Nav> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.movie_creation_outlined,
+              Icons.tv_outlined,
               color: Colors.white,
             ),
             label: 'Tvs',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.tv_outlined, color: Colors.white),
+            icon: Icon(Icons.movie_creation_outlined, color: Colors.white),
             label: 'Movies',
           ),
         ],
