@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_iti/core/styles/text_style.dart';
@@ -46,13 +47,27 @@ class CustomOnTheAirSection extends StatelessWidget {
                     child: Stack(
                       children: [
                         ClipRRect(
+                          // child: ExtendedImage.network(
+                          //   ApiConstance.imageUrl(
+                          //     i.backdropPath ?? '',
+                          //   ),
+                          //   height: 400,
+                          //   width: double.infinity,
+                          //   fit: BoxFit.cover,
+                          // ),
                           child: CachedNetworkImage(
-                            imageUrl: ApiConstance.imageUrl(
-                                i.backdropPath.toString()),
+                            imageUrl:
+                                ApiConstance.imageUrl(i.backdropPath ?? ''),
                             placeholder: (context, url) =>
                                 const ShimmerLoadingOnAir(), // Use the shimmer loading widget as a placeholder
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
+                            errorWidget: (context, url, error) {
+                              //const Icon(Icons.error),
+                              return Center(
+                                  child: Text(
+                                'Error',
+                                style: TextStyle(color: Colors.red),
+                              ));
+                            },
                             fit: BoxFit.cover,
                             width: double.infinity,
                             height: 400,
@@ -121,7 +136,7 @@ class CustomOnTheAirSection extends StatelessWidget {
                               ),
                               verticalSpace(10),
                               Text(
-                                i.title,
+                                i.title ?? '',
                                 style: TextStyles.TextRowTitle,
                               ),
                             ],

@@ -1,5 +1,5 @@
 class TvEntity {
-  final dynamic backdropPath;
+  final String? backdropPath;
   final dynamic id;
   final dynamic title;
   final dynamic overview;

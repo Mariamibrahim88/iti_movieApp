@@ -13,7 +13,7 @@ class TvDetailsModel extends TvDetail {
       required super.genres});
 
   factory TvDetailsModel.fromjson(Map<String, dynamic> json) => TvDetailsModel(
-        backdropPath: json["backdrop_path"],
+        backdropPath: json["backdrop_path"] ?? '',
         id: json["id"],
         overview: json["overview"],
         releaseDate: json["release_date"],

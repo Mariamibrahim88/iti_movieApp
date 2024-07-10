@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:movie_iti/tv/data/models/genre_Tv_model.dart';
 
 class TvDetail extends Equatable {
-  final dynamic backdropPath;
+  final String backdropPath;
   final List<GenresTvModel> genres;
   final dynamic id;
   final dynamic overview;
@@ -24,7 +24,7 @@ class TvDetail extends Equatable {
 
   @override
   List<Object> get props => [
-        backdropPath!,
+        backdropPath,
         id,
         overview,
         releaseDate,

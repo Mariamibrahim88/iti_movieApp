@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:movie_iti/core/utils/functions/service_locator.dart';
 import 'package:movie_iti/core/utils/functions/spacing.dart';
-
 import 'package:movie_iti/tv/presentation/components/custom_on_the_air_section.dart';
+
 import 'package:movie_iti/tv/presentation/components/custom_row.dart';
 import 'package:movie_iti/tv/presentation/components/popular_list_view_hor.dart';
 

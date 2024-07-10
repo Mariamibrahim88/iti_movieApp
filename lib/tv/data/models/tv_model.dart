@@ -13,7 +13,7 @@ class TvModel extends TvEntity {
 
   factory TvModel.fromJson(Map<String, dynamic> json) {
     return TvModel(
-      json['backdrop_path'],
+      json['backdrop_path'] ?? '',
       json["id"],
       json['overview'],
       json["vote_average"] != null ? json["vote_average"].toDouble() : 0.0,
