@@ -4,6 +4,7 @@ import 'package:movie_iti/core/utils/functions/enums.dart';
 import 'package:movie_iti/movie/domain/entities/movie_entity.dart';
 import 'package:movie_iti/movie/presentation/controller/bloc/movies_bloc.dart';
 import 'package:movie_iti/movie/presentation/controller/bloc/movies_state.dart';
+import 'package:movie_iti/movie/presentation/screens/movie_datails_screen.dart';
 
 import 'popular_movie_list_item_hor.dart';
 
@@ -36,12 +37,16 @@ class PopularMovieListViewhor extends StatelessWidget {
 
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 7.0),
-                    // child: GestureDetector(
-                    //   onTap: () {
-                    //     GoRouter.of(context)
-                    //         .push('/bookDetailsView', extra: state.books[index]);
-                    //   },
-                    child: PopularMovieListViewItemhor(movie: movvie),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    MovieDetailScreen(id: movvie.id)));
+                      },
+                      child: PopularMovieListViewItemhor(movie: movvie),
+                    ),
                   );
                 },
               ),

@@ -8,6 +8,7 @@ import 'package:movie_iti/core/utils/functions/api_constance.dart';
 import 'package:movie_iti/core/utils/functions/spacing.dart';
 import 'package:movie_iti/movie/presentation/controller/bloc/movies_bloc.dart';
 import 'package:movie_iti/movie/presentation/controller/bloc/movies_state.dart';
+import 'package:movie_iti/movie/presentation/screens/movie_datails_screen.dart';
 import 'package:movie_iti/tv/presentation/components/shimmer_custom_loading.dart';
 
 import '../../../core/utils/functions/enums.dart';
@@ -35,7 +36,13 @@ class CustomNowPlayingSection extends StatelessWidget {
                 ),
                 items: state.nowPlayingMovies.map((i) {
                   return GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  MovieDetailScreen(id: i.id)));
+                    },
                     child: Stack(
                       children: [
                         ClipRRect(

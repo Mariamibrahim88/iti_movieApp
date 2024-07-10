@@ -44,7 +44,7 @@ class PopularListItemVer extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(5),
                   child: CachedNetworkImage(
-                    imageUrl: ApiConstance.imageUrl(tv.backdropPath),
+                    imageUrl: ApiConstance.imageUrl(tv.backdropPath.toString()),
                     height: 140.h,
                     width: 95.w,
                     fit: BoxFit.cover,

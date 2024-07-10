@@ -19,7 +19,7 @@ class PopularListViewItemhor extends StatelessWidget {
           aspectRatio: 2.6 / 4,
           //child: Image.asset('assets/tv_image.jpg'),
           child: CachedNetworkImage(
-            imageUrl: ApiConstance.imageUrl(tv.backdropPath),
+            imageUrl: ApiConstance.imageUrl(tv.backdropPath.toString()),
             placeholder: (context, url) => const ShimmerLoadingPopularhor(),
             fit: BoxFit.fill,
             errorWidget: (context, url, error) => const Icon(Icons.error),

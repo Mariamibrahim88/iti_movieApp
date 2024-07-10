@@ -17,6 +17,25 @@ class ApiConstance {
   static const String topRatedMoviesPath =
       "$baseUrl/movie/top_rated?api_key=$apiKey";
 
+  static String movieDetailsPath(int movieId) =>
+      "$baseUrl/movie/$movieId?api_key=$apiKey";
+  static String recommendatiobnPath(int movieId) =>
+      "$baseUrl/movie/$movieId/recommendations?api_key=$apiKey";
+
+  static String TvDetailsPath(int tvId) => "$baseUrl/tv/$tvId?api_key=$apiKey";
+
+  static String recommendatiobnTvPath(int tvId) =>
+      "$baseUrl/tv/$tvId/recommendations?api_key=$apiKey";
+
+  //https://api.themoviedb.org/3/tv/{series_id}/recommendations
+
   //https://api.themoviedb.org/3/movie/550?api_key=1eef39c0162f3a9845a043fc105ed1ff
   //https://api.themoviedb.org/3/tv/on_the_air?api_key=1eef39c0162f3a9845a043fc105ed1ff
+
+  // https://api.themoviedb.org/3/tv/228068?api_key=1eef39c0162f3a9845a043fc105ed1ff
 }
+
+
+// https://api.themoviedb.org/3/review/{review_id}
+
+// https://api.themoviedb.org/3/tv/{series_id}

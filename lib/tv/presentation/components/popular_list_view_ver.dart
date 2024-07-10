@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie_iti/core/styles/text_style.dart';
 import 'package:movie_iti/core/utils/functions/app_bar.dart';
-import 'package:movie_iti/core/utils/functions/custom_navigate_bar.dart';
+
 import 'package:movie_iti/core/utils/functions/enums.dart';
 import 'package:movie_iti/core/utils/functions/spacing.dart';
 import 'package:movie_iti/tv/presentation/components/popular_list_item_ver.dart';

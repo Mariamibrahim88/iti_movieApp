@@ -43,7 +43,7 @@ class HomeViewBody extends StatelessWidget {
                   icon: Icons.arrow_forward_ios),
             ),
             verticalSpace(4),
-            const PopularListViewhor(),
+            // const PopularListViewhor(),
             verticalSpace(14),
             GestureDetector(
               onTap: () {
@@ -56,7 +56,7 @@ class HomeViewBody extends StatelessWidget {
                   icon: Icons.arrow_forward_ios),
             ),
             verticalSpace(4),
-            const TopRatedListViewhor(),
+            //const TopRatedListViewhor(),
           ],
         ),
       ),

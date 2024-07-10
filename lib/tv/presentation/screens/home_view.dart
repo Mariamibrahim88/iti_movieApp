@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_iti/core/utils/functions/custom_navigate_bar.dart';
+
 import 'package:movie_iti/tv/presentation/components/home_view_body.dart';
 
 class HomeView extends StatelessWidget {

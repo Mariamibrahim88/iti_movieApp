@@ -9,6 +9,7 @@ import 'package:movie_iti/core/utils/functions/enums.dart';
 import 'package:movie_iti/core/utils/functions/spacing.dart';
 import 'package:movie_iti/tv/presentation/components/shimmer_custom_loading.dart';
 import 'package:movie_iti/tv/presentation/controller/bloc/tv_bloc.dart';
+import 'package:movie_iti/tv/presentation/screens/tv_datails_screen.dart';
 
 class CustomOnTheAirSection extends StatelessWidget {
   const CustomOnTheAirSection({Key? key}) : super(key: key);
@@ -33,12 +34,21 @@ class CustomOnTheAirSection extends StatelessWidget {
                 ),
                 items: state.onAirtv.map((i) {
                   return GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  TvDetailScreen(id: i.id)));
+                      // GoRouter.of(context)
+                      //     .push('/bookDetailsView', extra: state.books[index]);
+                    },
                     child: Stack(
                       children: [
                         ClipRRect(
                           child: CachedNetworkImage(
-                            imageUrl: ApiConstance.imageUrl(i.backdropPath),
+                            imageUrl: ApiConstance.imageUrl(
+                                i.backdropPath.toString()),
                             placeholder: (context, url) =>
                                 const ShimmerLoadingOnAir(), // Use the shimmer loading widget as a placeholder
                             errorWidget: (context, url, error) =>
