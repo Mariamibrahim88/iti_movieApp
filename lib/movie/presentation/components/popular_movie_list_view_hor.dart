@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_iti/core/utils/functions/enums.dart';
-import 'package:movie_iti/movie/domain/entities/movie_entity.dart';
 import 'package:movie_iti/movie/presentation/controller/bloc/movies_bloc.dart';
 import 'package:movie_iti/movie/presentation/controller/bloc/movies_state.dart';
 import 'package:movie_iti/movie/presentation/screens/movie_datails_screen.dart';

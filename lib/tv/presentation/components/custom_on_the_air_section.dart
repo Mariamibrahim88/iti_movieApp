@@ -61,12 +61,12 @@ class CustomOnTheAirSection extends StatelessWidget {
                             placeholder: (context, url) =>
                                 const ShimmerLoadingOnAir(), // Use the shimmer loading widget as a placeholder
                             errorWidget: (context, url, error) {
-                              //const Icon(Icons.error),
-                              return Center(
-                                  child: Text(
-                                'Error',
-                                style: TextStyle(color: Colors.red),
-                              ));
+                              return const Icon(Icons.error);
+                              // return Center(
+                              //     child: Text(
+                              //   'Error',
+                              //   style: TextStyle(color: Colors.red),
+                              // ));
                             },
                             fit: BoxFit.cover,
                             width: double.infinity,
@@ -136,7 +136,7 @@ class CustomOnTheAirSection extends StatelessWidget {
                               ),
                               verticalSpace(10),
                               Text(
-                                i.title ?? '',
+                                i.title,
                                 style: TextStyles.TextRowTitle,
                               ),
                             ],

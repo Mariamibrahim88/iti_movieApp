@@ -4,6 +4,7 @@ import 'package:movie_iti/core/utils/functions/enums.dart';
 import 'package:movie_iti/movie/presentation/components/top_rated_movies_list_view_item_hor.dart';
 import 'package:movie_iti/movie/presentation/controller/bloc/movies_bloc.dart';
 import 'package:movie_iti/movie/presentation/controller/bloc/movies_state.dart';
+import 'package:movie_iti/movie/presentation/screens/movie_datails_screen.dart';
 
 class TopRatedMoviesListViewhor extends StatelessWidget {
   const TopRatedMoviesListViewhor({super.key});
@@ -30,14 +31,17 @@ class TopRatedMoviesListViewhor extends StatelessWidget {
                   final movvie = state.topRatedMovies[index];
                   return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 7.0),
-                      // child: GestureDetector(
-                      //   onTap: () {
-                      //     GoRouter.of(context)
-                      //         .push('/bookDetailsView', extra: state.books[index]);
-                      //   },
-                      child: TopRatedMoviesListViewItemHor(
-                        movie: movvie,
-                      ));
+                      child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        MovieDetailScreen(id: movvie.id)));
+                          },
+                          child: TopRatedMoviesListViewItemHor(
+                            movie: movvie,
+                          )));
                 },
               ),
             );

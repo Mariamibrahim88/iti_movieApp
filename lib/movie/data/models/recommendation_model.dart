@@ -1,7 +1,7 @@
 import 'package:movie_iti/movie/domain/entities/recommendation_entity.dart';
 
 class RecommendationModel extends Recommendation {
-  RecommendationModel({super.backdropPath, required super.id});
+  const RecommendationModel({super.backdropPath, required super.id});
 
   factory RecommendationModel.fromjson(Map<String, dynamic> json) =>
       RecommendationModel(

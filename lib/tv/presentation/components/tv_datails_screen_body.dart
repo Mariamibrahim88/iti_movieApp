@@ -127,15 +127,15 @@ class TvDetailContent extends StatelessWidget {
                                 ],
                               ),
                               const SizedBox(width: 16.0),
-                              Text(
-                                _showDuration(state.tvDetail!.runtime!),
-                                style: const TextStyle(
-                                  color: Colors.white70,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 1.2,
-                                ),
-                              ),
+                              // Text(
+                              //   _showDuration(state.tvDetail!.runtime!),
+                              //   style: const TextStyle(
+                              //     color: Colors.white70,
+                              //     fontSize: 16.0,
+                              //     fontWeight: FontWeight.w500,
+                              //     letterSpacing: 1.2,
+                              //   ),
+                              // ),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -148,15 +148,15 @@ class TvDetailContent extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 8.0),
-                          Text(
-                            '${AppString.genres}: ${_showGenres(state.tvDetail!.genres)}',
-                            style: const TextStyle(
-                              color: Colors.white70,
-                              fontSize: 12.0,
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 1.2,
-                            ),
-                          ),
+                          // Text(
+                          //   '${AppString.genres}: ${_showGenres(state.tvDetail!.genres)}',
+                          //   style: const TextStyle(
+                          //     color: Colors.white70,
+                          //     fontSize: 12.0,
+                          //     fontWeight: FontWeight.w500,
+                          //     letterSpacing: 1.2,
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),
@@ -193,18 +193,18 @@ class TvDetailContent extends StatelessWidget {
     );
   }
 
-  String _showGenres(List<GenresTv> genres) {
-    String result = '';
-    for (var genre in genres) {
-      result += '${genre.name}, ';
-    }
+  // String _showGenres(List<GenresTv> genres) {
+  //   String result = '';
+  //   for (var genre in genres) {
+  //     result += '${genre.id}, ';
+  //   }
 
-    if (result.isEmpty) {
-      return result;
-    }
+  //   if (result.isEmpty) {
+  //     return result;
+  //   }
 
-    return result.substring(0, result.length - 2);
-  }
+  //   return result.substring(0, result.length - 2);
+  // }
 
   String _showDuration(int runtime) {
     final int hours = runtime ~/ 60;

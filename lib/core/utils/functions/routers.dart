@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:movie_iti/movie/presentation/screens/movie_datails_screen.dart';
 import 'package:movie_iti/movie/presentation/screens/popular_movie_view.dart';
+import 'package:movie_iti/movie/presentation/screens/top_rated_view.dart';
 import 'package:movie_iti/tv/presentation/screens/nav_buttom.dart';
 import 'package:movie_iti/tv/presentation/screens/popular_tv_list_view.dart';
 import 'package:movie_iti/tv/presentation/screens/top_rated_tv_list_view.dart';
@@ -22,7 +23,7 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: '/topRatedMoviesListView',
-      builder: (context, state) => const TopRatedTvListView(),
+      builder: (context, state) => const TopRatedMoviesListView(),
     ),
     // GoRoute(
     //   path: '/bookDetailsView',

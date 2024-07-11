@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -43,7 +42,7 @@ class HomeViewBody extends StatelessWidget {
                   icon: Icons.arrow_forward_ios),
             ),
             verticalSpace(4),
-            // const PopularListViewhor(),
+            const PopularListViewhor(),
             verticalSpace(14),
             GestureDetector(
               onTap: () {
@@ -56,7 +55,7 @@ class HomeViewBody extends StatelessWidget {
                   icon: Icons.arrow_forward_ios),
             ),
             verticalSpace(4),
-            //const TopRatedListViewhor(),
+            const TopRatedListViewhor(),
           ],
         ),
       ),

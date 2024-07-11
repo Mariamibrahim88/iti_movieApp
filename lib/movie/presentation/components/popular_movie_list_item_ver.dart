@@ -7,6 +7,7 @@ import 'package:movie_iti/core/styles/text_style.dart';
 import 'package:movie_iti/core/utils/functions/api_constance.dart';
 import 'package:movie_iti/core/utils/functions/spacing.dart';
 import 'package:movie_iti/movie/domain/entities/movie_entity.dart';
+import 'package:movie_iti/movie/presentation/screens/movie_datails_screen.dart';
 import 'package:movie_iti/tv/presentation/components/shimmer_custom_loading.dart';
 
 class PopularMovieListItemVer extends StatelessWidget {
@@ -34,6 +35,11 @@ class PopularMovieListItemVer extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             //GoRouter.of(context).push('/detailsView', extra: movies);
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        MovieDetailScreen(id: movie.id)));
           },
           child: Card(
             elevation: 15,
@@ -49,7 +55,8 @@ class PopularMovieListItemVer extends StatelessWidget {
                     height: 140.h,
                     width: 95.w,
                     fit: BoxFit.cover,
-                    placeholder: (context, url) => ShimmerLoadingPopularver(),
+                    placeholder: (context, url) =>
+                        const ShimmerLoadingPopularver(),
                     errorWidget: (context, url, error) =>
                         const Icon(Icons.error),
                   ),

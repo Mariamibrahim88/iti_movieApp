@@ -1,23 +1,24 @@
 import 'package:equatable/equatable.dart';
 
 import 'package:movie_iti/tv/data/models/genre_Tv_model.dart';
+import 'package:movie_iti/tv/domain/entities/genre_tv_entity.dart';
 
 class TvDetail extends Equatable {
   final String backdropPath;
-  final List<GenresTvModel> genres;
-  final dynamic id;
-  final dynamic overview;
-  final dynamic releaseDate;
-  final dynamic? runtime;
-  final dynamic title;
-  final dynamic voteAverage;
+  final List<GenresTv> genres;
+  final int id;
+  final String overview;
+  final String releaseDate;
+  //final int? runtime;
+  final String title;
+  final double voteAverage;
 
   const TvDetail(
       {required this.backdropPath,
       required this.id,
       required this.overview,
       required this.releaseDate,
-      required this.runtime,
+      //required this.runtime,
       required this.title,
       required this.voteAverage,
       required this.genres});
@@ -28,7 +29,7 @@ class TvDetail extends Equatable {
         id,
         overview,
         releaseDate,
-        runtime!,
+        //runtime!,
         title,
         voteAverage,
         genres

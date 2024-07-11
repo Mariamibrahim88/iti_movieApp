@@ -1,11 +1,11 @@
 class TvEntity {
   final String? backdropPath;
-  final dynamic id;
-  final dynamic title;
-  final dynamic overview;
-  final List<dynamic>? genreIds;
-  final dynamic voteAverage;
-  final dynamic date;
+  final int id;
+  final String title;
+  final String overview;
+  final List<int>? genreIds;
+  final double voteAverage;
+  final String date;
 
   TvEntity(
     this.id,

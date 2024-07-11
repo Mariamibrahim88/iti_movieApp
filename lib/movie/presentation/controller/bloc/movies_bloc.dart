@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_iti/core/utils/functions/enums.dart';
 import 'package:movie_iti/movie/domain/use_cases/get_now_playing_movie_use_case.dart';
